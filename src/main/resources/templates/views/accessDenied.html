@@ -5,7 +5,7 @@
 	<title>AccessDenied page</title>
 </head>
 <body>
-	Dear <strong>${user}</strong>, You are not authorized to access this page
-	<a th:href="@{/logout}" href="/logout" />">Logout</a>
+	Dear <strong th:text="${user}">zhangsan</strong>, You are not authorized to access this page
+	<a th:href="@{/logout}" href="/logout">Logout</a>
 </body>
 </html>

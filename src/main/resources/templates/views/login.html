@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8" />
 	<title>HelloWorld Login page</title>
-	<link href="<c:url value='/static/css/bootstrap.css' />"  rel="stylesheet"></link>
+	<link th: href="<c:url value='/static/css/bootstrap.css' />"  rel="stylesheet"></link>
 	<link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
 	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
 </head>
@@ -16,7 +16,7 @@
 					<c:url var="loginUrl" value="/login" />
 					<form th:action="@{/login}" action="/login" method="post" class="form-horizontal">
 						<c:if test="${param.error != null}">
-							<div  th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+							<div th class="alert alert-danger">
 								<p>Invalid username and password.</p>
 							</div>
 						</c:if>
