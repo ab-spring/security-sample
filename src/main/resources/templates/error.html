@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Error</title>
+</head>
+<body>
+		<h1>Messages : Error</h1>
+		<div class="alert alert-error" th:if="${globalMessage}" th:text="${globalMessage}">Error</div>
+</body>
+</html>

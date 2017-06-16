@@ -8,12 +8,12 @@
 <body>
 	Dear <strong>${user}</strong>, Welcome to Admin Page.
 	
-	<sec:authorize access="isFullyAuthenticated()">
+	<span sec:authorize="isFullyAuthenticated()">
 		<label><a th:href="@{#}" href="#">Create New User</a> | <a href="#">View existing Users</a></label>
-	</sec:authorize>
-	<sec:authorize access="isRememberMe()">
+	</span>
+	<span sec:authorize="isRememberMe()">
 		<label><a th:href="@{#}" href="#">View existing Users</a></label>
-	</sec:authorize>
+	</span>
  
 	<a th:href="@{/logout}" href="/logout" />">Logout</a>
 </body>

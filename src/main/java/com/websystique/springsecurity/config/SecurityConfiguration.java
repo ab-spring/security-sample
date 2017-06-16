@@ -38,11 +38,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         .and().exceptionHandling().accessDeniedPage("/Access_Denied");
 	  	
 	}
-	
-//	@Bean
-//	public PersistentTokenRepository persistentTokenRepository() {
-//		JdbcTokenRepositoryImpl tokenRepositoryImpl = new JdbcTokenRepositoryImpl();
-//		tokenRepositoryImpl.setDataSource(dataSource);
-//		return tokenRepositoryImpl;
-//	}
 }
