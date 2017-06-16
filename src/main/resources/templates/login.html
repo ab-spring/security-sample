@@ -33,9 +33,7 @@
                               <label><input type="checkbox" id="rememberme" name="remember-me" /> Remember Me</label>  
                             </div>
 						</div>
-<!-- 						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> -->
 						<input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}" />
-<!-- 						<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" th:required="required"> -->
 						<div class="form-actions">
 							<input type="submit" class="btn btn-block btn-primary btn-default" value="Log in" />
 						</div>

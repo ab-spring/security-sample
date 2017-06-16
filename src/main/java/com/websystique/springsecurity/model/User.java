@@ -51,7 +51,7 @@ public class User implements UserDetails {
     @Column(name = "EMAIL", nullable = false)
     private String            email;
 
-    @Column(name = "STATE", nullable = false)
+    @Column(name = "STATE", unique = true, nullable = false)
     @Enumerated(EnumType.STRING)
     private State             state;
 
