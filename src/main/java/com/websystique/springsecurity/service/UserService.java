@@ -1,11 +1,15 @@
 package com.websystique.springsecurity.service;
 
+import java.util.Optional;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 import com.websystique.springsecurity.model.User;
 
-public interface UserService {
+public interface UserService extends UserDetailsService {
 
 	User findById(int id);
 	
-	User findBySso(String sso);
+	Optional<User> findBySso(String sso);
 	
 }

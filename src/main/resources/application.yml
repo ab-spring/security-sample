@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+      
+logging:
+  level:
+    org.springframework.security: trace 
