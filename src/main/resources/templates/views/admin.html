@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<title>Admin page</title>
+</head>
+<body>
+	Dear <strong>${user}</strong>, Welcome to Admin Page.
+	
+	<sec:authorize access="isFullyAuthenticated()">
+		<label><a th:href="@{#}" href="#">Create New User</a> | <a href="#">View existing Users</a></label>
+	</sec:authorize>
+	<sec:authorize access="isRememberMe()">
+		<label><a th:href="@{#}" href="#">View existing Users</a></label>
+	</sec:authorize>
+ 
+	<a th:href="@{/logout}" href="/logout" />">Logout</a>
+</body>
+</html>
