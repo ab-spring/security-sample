@@ -5,7 +5,7 @@
 	<title>DBA page</title>
 </head>
 <body>
-	Dear <strong>${user}</strong>, Welcome to DBA Page.
+	Dear <strong th:text="${user}">lwk</strong>, Welcome to DBA Page.
 	<a th:href="@{/logout}" href="/logout">Logout</a>
 </body>
 </html>

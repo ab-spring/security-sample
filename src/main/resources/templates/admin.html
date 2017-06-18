@@ -6,7 +6,7 @@
 	<title>Admin page</title>
 </head>
 <body>
-	Dear <strong>${user}</strong>, Welcome to Admin Page.
+	Dear <strong th:text="${user}">lwk</strong>, Welcome to Admin Page.
 	
 	<span sec:authorize="isFullyAuthenticated()">
 		<label><a th:href="@{#}" href="#">Create New User</a> | <a href="#">View existing Users</a></label>
@@ -15,6 +15,6 @@
 		<label><a th:href="@{#}" href="#">View existing Users</a></label>
 	</span>
  
-	<a th:href="@{/logout}" href="/logout" />">Logout</a>
+	<a th:href="@{/logout}" href="/logout">Logout</a>
 </body>
 </html>

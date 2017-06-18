@@ -263,7 +263,7 @@ public class User implements UserDetails {
 
         for (UserProfile userProfile : getUserProfiles()) {
             System.out.println("UserProfile : " + userProfile);
-            authorities.add(new SimpleGrantedAuthority(userProfile.getType().name()));
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + userProfile.getType().name()));
         }
         return authorities;
     }
