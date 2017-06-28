@@ -1,7 +1,5 @@
 package com.websystique.springsecurity.config;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -17,9 +15,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	UserDetailsService userDetailsService;
 	
-	@Autowired
-	DataSource dataSource;
+//	@Autowired
+//	DataSource dataSource;
 	
+	/**
+	 * 
+	 * Methods
+	 * 
+	 * @param auth
+	 * @throws Exception
+	 */
 	@Autowired
 	public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService);
